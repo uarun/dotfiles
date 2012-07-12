@@ -7,11 +7,11 @@ let mapleader = ","
 runtime macros/matchit.vim
 runtime ftplugin/man.vim
 
-" Load bundled plugins
+" ================ Pathogen Init ======================
 call pathogen#infect()
 call pathogen#helptags()
 
-" allow backspacing over everything in insert mode
+" ================ General ======================
 set backspace=indent,eol,start
 set history=100
 set incsearch
@@ -57,8 +57,7 @@ set noswapfile
 
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
-" Only works all the time.
 
-silent !mkdir ~/.vimbackups/backups > /dev/null 2>&1
-set undodir=~/.vimbackups/backups
+silent !mkdir ~/.vimundos/backups > /dev/null 2>&1
+set undodir=~/.vimundos/backups
 set undofile
