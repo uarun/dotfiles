@@ -10,10 +10,12 @@ set -o vi
 
 ## History Settings
 # Ignore duplicates (&), ls, bg, fg, exit and any command starting with whitespaces
+export HISTCONTROL=ignoreboth
 export HISTIGNORE="[ \t]*:&:ls:[bf]g:exit"
 
 shopt -s cmdhist      # Keep multiline commands as one command in history
 shopt -s histappend   # Keep multi-session history w/o losing one or the other
+shopt -s checkwinsize # check the window size after each command and, if necessary, update the values of LINES and COLUMNS.
 
 ## Git Stuff ##
 source ~/.bash_scripts/git-completion.bash
@@ -21,4 +23,11 @@ source ~/.bash_scripts/git-alias.bash
 source ~/.bash_scripts/git-prompt.sh
 source ~/.bash_scripts/git-prompt.bash
 
+## Bash Alises ##
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# Start ssh-agent if its not already running
+source ~/.bash_scripts/ssh_agent.bash
 
