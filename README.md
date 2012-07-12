@@ -17,8 +17,10 @@ Create symlinks:
 
     ln -s ~/dotfiles/bashrc ~/.bashrc
     ln -s ~/dotfiles/vimrc  ~/.vimrc
-    ln -s ~/dotfiles/vim    ~/.vim
     ln -s ~/dotfiles/ctags  ~/.ctags
+
+    ln -s ~/dotfiles/vim          ~/.vim
+    ln -s ~/dotfiles/bash_scripts ~/.bash_scripts
 
 ## VIM
 
