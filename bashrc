@@ -18,5 +18,7 @@ shopt -s histappend   # Keep multi-session history w/o losing one or the other
 ## Git Stuff ##
 source ~/.bash_scripts/git-completion.bash
 source ~/.bash_scripts/git-alias.bash
+source ~/.bash_scripts/git-prompt.sh
 source ~/.bash_scripts/git-prompt.bash
+
 
