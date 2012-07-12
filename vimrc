@@ -13,10 +13,11 @@ call pathogen#helptags()
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-set history=50
+set history=100
 set incsearch
 set visualbell t_vb=
 set hidden
+set autoread
 set nojoinspaces
 set wildmode=longest,list
 set nrformats=
@@ -24,13 +25,13 @@ if has('mouse')
   set mouse=a
 endif
 
-" Appearance
+" ================ Appearance ======================
 set ruler
 set showcmd
+set showmode
 set laststatus=2
-set listchars=tab:▸\ ,eol:¬
+set list listchars=tab:▸\ ,trail:·
 set number
-"set cursorline
 
 " When the terminal has colors, enable syntax+search highlighting
 if &t_Co > 2 || has("gui_running")
@@ -38,13 +39,26 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
-" Indentation
-set tabstop=4
+" ================ Indentation ======================
+set autoindent
+set smartindent
+set smarttab
+set shiftwidth=4
 set softtabstop=4
-set shiftwidth=2
+set tabstop=4
 set expandtab
 
-" Disable swapfile and backup
+filetype plugin on
+filetype indent on
+
+" ================ Disable swapfile and backup ================
 set nobackup
 set noswapfile
 
+" ================ Persistent Undo ==================
+" Keep undo history across sessions, by storing in file.
+" Only works all the time.
+
+silent !mkdir ~/.vim/backups > /dev/null 2>&1
+set undodir=~/.vim/backups
+set undofile
