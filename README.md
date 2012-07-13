@@ -15,12 +15,14 @@ running the commands:
 
 Create symlinks:
 
-    ln -s ~/dotfiles/bashrc ~/.bashrc
-    ln -s ~/dotfiles/vimrc  ~/.vimrc
-    ln -s ~/dotfiles/ctags  ~/.ctags
-
     ln -s ~/dotfiles/vim          ~/.vim
     ln -s ~/dotfiles/bash_scripts ~/.bash_scripts
+
+    ln -s ~/dotfiles/home/vimrc   ~/.vimrc
+    ln -s ~/dotfiles/home/bashrc  ~/.bashrc
+    ln -s ~/dotfiles/home/zshrc   ~/.zshrc
+    ln -s ~/dotfiles/home/zlogout ~/.zlogout
+    ln -s ~/dotfiles/home/ctags   ~/.ctags
 
 ## VIM
 
