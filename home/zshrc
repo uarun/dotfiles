@@ -36,4 +36,25 @@ plugins=(git gradle dirpersist ssh-agent vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
+# ====================================== #
+# ===== Customize to your needs... ===== #
+# ====================================== #
+
+# ===== History Configuration ===== #
+HISTSIZE=5000            # number of many lines to keep in memory
+SAVEHIST=5000            # number of history entries to save to disk
+HISTFILE=~/.zsh_history  # location of history file
+HISTDUP=erase            # erase duplicates in the history file
+setopt appendhistory     # append history to the history file (no overwriting)
+setopt sharehistory      # share history across terminals
+setopt incappendhistory  # immediately append to the history file, not just when a term is killed
+
+# ===== z-zsh setup ===== # 
+. ~/dotfiles/zsh_modules/z-zsh/z.sh
+function precmd () {
+      z --add "$(pwd -P)"
+}
+
+# ===== Shell agnostic settings ===== #
+source ~/.profile
+
