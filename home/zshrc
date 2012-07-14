@@ -41,13 +41,15 @@ source $ZSH/oh-my-zsh.sh
 # ====================================== #
 
 # ===== History Configuration ===== #
-HISTSIZE=5000            # number of many lines to keep in memory
-SAVEHIST=5000            # number of history entries to save to disk
-HISTFILE=~/.zsh_history  # location of history file
-HISTDUP=erase            # erase duplicates in the history file
-setopt appendhistory     # append history to the history file (no overwriting)
-setopt sharehistory      # share history across terminals
-setopt incappendhistory  # immediately append to the history file, not just when a term is killed
+export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
+export HISTFILE=~/.zsh_history
+export HISTSIZE=15000
+export SAVEHIST=10000
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt HIST_VERIFY
 
 # ===== z-zsh setup ===== # 
 . ~/dotfiles/zsh_modules/z-zsh/z.sh
