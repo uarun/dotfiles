@@ -1,0 +1,10 @@
+# =========================================== #
+# ===== Generic Shell agnostic settings ===== #
+# =========================================== #
+
+# ===== Default EDITOR to vi ===== #
+export EDITOR=vi
+
+source ~/dotfiles/common/vars.sh
+source ~/dotfiles/common/paths.sh
+source ~/dotfiles/common/aliases.sh

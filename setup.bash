@@ -33,8 +33,10 @@ echo "Initializing links ..."
 pushd ~
 
 export DOTFILES_DIR="${HOME}/dotfiles/home"
+createSymlink .profile
 createSymlink .bashrc
 createSymlink .zshrc
+createSymlink .zprofile
 createSymlink .zlogout
 createSymlink .vimrc
 createSymlink .tmux.conf
