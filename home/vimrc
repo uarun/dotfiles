@@ -61,3 +61,5 @@ set noswapfile
 silent !mkdir ~/.vimundos/backups > /dev/null 2>&1
 set undodir=~/.vimundos/backups
 set undofile
+
+colorscheme molokai
