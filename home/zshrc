@@ -31,7 +31,7 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git gradle dirpersist ssh-agent vi-mode)
+plugins=(git gradle dirpersist ssh-agent vi-mode history-substring-search)
 # Other interesting plugins: history-substring-search, git-flow, grails
 
 source $ZSH/oh-my-zsh.sh
