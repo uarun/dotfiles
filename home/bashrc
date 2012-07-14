@@ -23,11 +23,8 @@ source ~/.bash_scripts/git-alias.bash
 source ~/.bash_scripts/git-prompt.sh
 source ~/.bash_scripts/git-prompt.bash
 
-## Bash Alises ##
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
 # Start ssh-agent if its not already running
 source ~/.bash_scripts/ssh_agent.bash
 
+# ===== Shell agnostic settings ===== #
+source ~/.profile
