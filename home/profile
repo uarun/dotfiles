@@ -8,3 +8,9 @@ export EDITOR=vi
 source ~/dotfiles/common/vars.sh
 source ~/dotfiles/common/paths.sh
 source ~/dotfiles/common/aliases.sh
+
+
+# Source global definitions
+if [ -f ~/custom_env ]; then
+    . ~/custom_env
+fi
