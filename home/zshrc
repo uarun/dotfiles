@@ -32,7 +32,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git gradle dirpersist ssh-agent vi-mode history-substring-search)
-# Other interesting plugins: history-substring-search, git-flow, grails
+# Other interesting plugins: git-flow, grails
 
 source $ZSH/oh-my-zsh.sh
 
@@ -50,6 +50,9 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_REDUCE_BLANKS
 setopt HIST_VERIFY
+
+# Disable automatic renaming of the tmux sessions
+export DISABLE_AUTO_TITLE="true"
 
 # ===== z-zsh setup ===== # 
 . ~/dotfiles/zsh_modules/z-zsh/z.sh
