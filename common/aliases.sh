@@ -15,4 +15,5 @@ unalias gp 2> /dev/null
 ## ===== General ===== ###
 alias cls=clear
 alias vi=vim
+alias tmux="tmux -2"
 
