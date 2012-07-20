@@ -64,3 +64,5 @@ set undofile
 
 set t_Co=256
 colorscheme molokai
+
+let g:Powerline_symbols = 'fancy'
