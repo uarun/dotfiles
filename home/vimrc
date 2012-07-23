@@ -65,4 +65,6 @@ set undofile
 set t_Co=256
 colorscheme molokai
 
+" Get rid of the annoying paren matching
+let loaded_matchparen = 1
 let g:Powerline_symbols = 'fancy'
