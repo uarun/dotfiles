@@ -2,8 +2,8 @@
 # ===== Generic Shell agnostic settings ===== #
 # =========================================== #
 
-# ===== Default EDITOR to vi ===== #
-export EDITOR=vi
+# ===== Default EDITOR to vim ===== #
+export EDITOR=vim
 
 source ~/dotfiles/common/vars.sh
 source ~/dotfiles/common/paths.sh
