@@ -63,3 +63,5 @@ function precmd () {
 # ===== Shell agnostic settings ===== #
 source ~/.profile
 
+# ===== Disable auto-logout ===== #
+unset TMOUT
