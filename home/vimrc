@@ -67,7 +67,16 @@ colorscheme molokai
 
 " Get rid of the annoying paren matching
 let loaded_matchparen = 1
+
+" ========== Customizing Plugins =========
+" === Powerline ===
 let g:Powerline_symbols = 'fancy'
 
-"Key Mappings
+" === CtrlP ===
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+    \ 'file': '\.exe$\|\.so$\|\.dll$\|\.class$\|\.jar$\|\.zip$',
+    \ }
+
+" ========== Key Mappings ==========
 nnoremap \p :set invpaste paste?<CR>
