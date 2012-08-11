@@ -19,11 +19,13 @@ set visualbell t_vb=
 set hidden
 set autoread
 set nojoinspaces
-set wildmode=longest,list
 set nrformats=
 if has('mouse')
   set mouse=a
 endif
+
+set ignorecase
+set smartcase
 
 " ================ Appearance ======================
 set ruler
@@ -54,6 +56,22 @@ filetype indent on
 " ================ Disable swapfile and backup ================
 set nobackup
 set noswapfile
+set nowb
+
+" ================ Scrolling ===================
+set scrolloff=5
+set sidescrolloff=15
+set sidescroll=1
+
+" ================ Completion =======================
+set wildmode=list:longest
+set wildmenu                        "enable ctrl-n and ctrl-p to scroll thru matches
+set wildignore=*.o,*.obj,*~         "stuff to ignore when tab completing
+set wildignore+=*DS_Store*
+set wildignore+=vendor/rails/**
+set wildignore+=tmp/**
+set wildignore+=*.png,*.jpg,*.gif
+set wildignore+=*.class,*.jar
 
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
@@ -80,3 +98,4 @@ let g:ctrlp_custom_ignore = {
 
 " ========== Key Mappings ==========
 nnoremap \p :set invpaste paste?<CR>
+nmap <silent> <leader>n :silent :nohlsearch<CR>
