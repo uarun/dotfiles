@@ -40,3 +40,6 @@
 [submodule "vim/bundle/vim-repeat"]
 	path = vim/bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
+[submodule "vim/bundle/vim-colors-molokai"]
+	path = vim/bundle/vim-colors-molokai
+	url = https://github.com/tomasr/molokai.git
