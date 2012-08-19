@@ -1,0 +1,5 @@
+# ===== z-zsh setup ===== #
+. ~/dotfiles/zsh_modules/z-zsh/z.sh
+function precmd () {
+    z --add "$(pwd -P)"
+}

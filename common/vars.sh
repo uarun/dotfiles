@@ -1,7 +1,9 @@
-# Set TERM to xterm-256color if not invoked under tmux
-#case "$TERM" in
-#    screen|screen-256color)
-#        ;;
-#    *)
-#        export TERM=xterm-256color;;
-#esac
+# =====  Disable automatic renaming of the tmux sessions ===== #
+export DISABLE_AUTO_TITLE="true"
+
+# ===== Use vim as Pager ===== #
+if [[ -f ~/dotfiles/utils/vimpager/vimpager ]]; then
+    export PAGER=~/dotfiles/utils/vimpager/vimpager
+    alias less=$PAGER
+    alias zless=$PAGER
+fi

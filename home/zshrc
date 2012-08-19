@@ -40,28 +40,9 @@ source $ZSH/oh-my-zsh.sh
 # ===== Customize to your needs... ===== #
 # ====================================== #
 
-# ===== History Configuration ===== #
-export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
-export HISTFILE=~/.zsh_history
-export HISTSIZE=15000
-export SAVEHIST=10000
-setopt INC_APPEND_HISTORY
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_IGNORE_SPACE
-setopt HIST_REDUCE_BLANKS
-setopt HIST_VERIFY
-
-# Disable automatic renaming of the tmux sessions
-export DISABLE_AUTO_TITLE="true"
-
-# ===== z-zsh setup ===== # 
-. ~/dotfiles/zsh_modules/z-zsh/z.sh
-function precmd () {
-      z --add "$(pwd -P)"
-}
+# ===== Zsh customization scripts ===== #
+for config_file (~/dotfiles/zsh_scripts/*.zsh) source $config_file
 
 # ===== Shell agnostic settings ===== #
 source ~/.profile
 
-# ===== Disable auto-logout ===== #
-unset TMOUT
