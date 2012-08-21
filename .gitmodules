@@ -49,3 +49,6 @@
 [submodule "utils/fasd"]
 	path = utils/fasd
 	url = https://github.com/clvv/fasd.git
+[submodule "colors/gnome-terminal-colors-solarized"]
+	path = colors/gnome-terminal-colors-solarized
+	url = https://github.com/sigurdga/gnome-terminal-colors-solarized.git
