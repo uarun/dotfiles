@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/dotfiles/zsh_modules/oh-my-zsh
+ZSH_CUSTOM=$HOME/dotfiles/zsh_modules/omz-custom
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -31,7 +32,7 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git gradle dirpersist ssh-agent vi-mode history-substring-search)
+plugins=(git gradle dirpersist ssh-agent vi-mode history-substring-search zsh-syntax-highlighting)
 # Other interesting plugins: git-flow, grails
 
 source $ZSH/oh-my-zsh.sh
