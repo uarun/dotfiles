@@ -41,6 +41,9 @@ source $ZSH/oh-my-zsh.sh
 # ====================================== #
 
 # ===== Zsh customization scripts ===== #
+if [[ -f ~/.custom_zsh.sh ]] then;
+    source ~/.custom_zsh.sh
+fi
 for config_file (~/dotfiles/zsh_scripts/*.zsh) source $config_file
 
 # ===== Shell agnostic settings ===== #

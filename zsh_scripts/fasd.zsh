@@ -2,7 +2,7 @@
 FASD_HOME=~/dotfiles/utils/fasd
 FASD=$FASD_HOME/fasd
 
-if [[ -f $FASD ]]; then;
+if [[ -f $FASD && $MY_JUMP_UTIL == "fasd" ]]; then;
     export PATH=$FASD_HOME:$PATH
 
     # ===== initialize fasd ===== #
