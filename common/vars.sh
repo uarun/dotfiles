@@ -10,4 +10,11 @@ if [[ -f ~/dotfiles/utils/vimpager/vimpager ]]; then
 fi
 
 # ===== Dir Colors for Solarized ===== #
-eval "`dircolors ~/dotfiles/colors/dircolors-solarized/dircolors.ansi-universal`"
+if [[ $OSTYPE == linux-gnu ]]; then
+    eval "`dircolors ~/dotfiles/colors/dircolors-solarized/dircolors.ansi-universal`"
+elif [[ $OSTYPE == darwin* ]]; then
+    export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
+else
+    #... Do nothing
+fi
+
