@@ -8,3 +8,6 @@ if [[ -f ~/dotfiles/utils/vimpager/vimpager ]]; then
     alias less=$PAGER
     alias zless=$PAGER
 fi
+
+# ===== Dir Colors for Solarized ===== #
+eval "`dircolors ~/dotfiles/colors/dircolors-solarized/dircolors.ansi-universal`"
