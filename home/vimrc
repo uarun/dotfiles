@@ -80,8 +80,10 @@ silent !mkdir ~/.vimundos/backups > /dev/null 2>&1
 set undodir=~/.vimundos/backups
 set undofile
 
+" ===== Color Scheme =====
 set t_Co=256
-colorscheme molokai
+set bg=light
+colorscheme solarized
 
 " Get rid of the annoying paren matching
 let loaded_matchparen = 1
