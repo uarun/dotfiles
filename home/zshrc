@@ -41,7 +41,10 @@ source $ZSH/oh-my-zsh.sh
 # ===== Customize to your needs... ===== #
 # ====================================== #
 
+ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
+
 # ===== Zsh customization scripts ===== #
+export MY_JUMP_UTIL="fasd"
 if [[ -f ~/.custom_zsh.sh ]] then;
     source ~/.custom_zsh.sh
 fi
