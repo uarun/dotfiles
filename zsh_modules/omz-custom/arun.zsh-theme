@@ -1,18 +1,17 @@
 MODE_INDICATOR="%{$fg_bold[red]%}❮%{$reset_color%}%{$fg[red]%}❮❮%{$reset_color%}"
 local return_status="%{$fg[red]%}%(?..⏎)%{$reset_color%} "
 
+#local PROMPT_CHAR=❯
+#local PROMPT_CHAR=➤
 
-local PROMPT_CHAR=❯
 PROMPT_SUCCESS_COLOR=$FG[071]
 PROMPT_FAILURE_COLOR=$FG[124]
 
-#ZSH_THEME_GIT_PROMPT_PREFIX="|"
-#ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_PREFIX="git:(%{$fg_bold[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$reset_color%})%{$fg_bold[red]%} ⚡ %{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_AHEAD="%{$reset_color%})%{$fg_bold[red]%} ! %{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%})%{$fg_bold[green]%} ✓ %{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$reset_color%})%{$fg_bold[red]%}✗ %{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_AHEAD="%{$reset_color%})%{$fg_bold[red]%}! %{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%})%{$fg_bold[green]%}✓ %{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%} ✚"
 ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[blue]%} ✹"
@@ -27,7 +26,7 @@ ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$reset_color%}"
 
 function prompt_char() {
   git branch >/dev/null 2>/dev/null && echo "%{$fg[green]%}±%{$reset_color%}" && return
-  hg root >/dev/null 2>/dev/null && echo "%{$fg_bold[red]%}☿%{$reset_color%}" && return
+  # hg root >/dev/null 2>/dev/null && echo "%{$fg_bold[red]%}☿%{$reset_color%}" && return
   echo "%{$fg[cyan]%}◯%{$reset_color%}"
 }
 
