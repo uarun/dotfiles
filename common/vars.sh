@@ -15,6 +15,6 @@ if [[ $OSTYPE == linux-gnu ]]; then
 elif [[ $OSTYPE == darwin* ]]; then
     export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 else
-    #... Do nothing
+    true
 fi
 
