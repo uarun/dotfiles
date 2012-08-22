@@ -9,6 +9,7 @@ ZSH_CUSTOM=$HOME/dotfiles/zsh_modules/omz-custom
 ZSH_THEME="juanghurtado"
 ZSH_THEME="gozilla"
 ZSH_THEME="robbyrussell"
+ZSH_THEME="arun"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
