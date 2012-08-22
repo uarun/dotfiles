@@ -21,8 +21,8 @@ ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%} ═"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭"
 
 # Format for git_prompt_long_sha() and git_prompt_short_sha()
-ZSH_THEME_GIT_PROMPT_SHA_BEFORE="➤ %{$fg_bold[yellow]%}"
-ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_SHA_BEFORE="[%{$fg[cyan]%}"
+ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$reset_color%}]"
 
 function prompt_char() {
   git branch >/dev/null 2>/dev/null && echo "%{$fg[green]%}±%{$reset_color%}" && return
@@ -83,7 +83,7 @@ function git_time_since_commit() {
 }
 
 PROMPT='
-╭─[%{$fg[yellow]%}%n@%m%{$reset_color%}]─[%{$fg[cyan]%}%~%{$reset_color%}]─[%{$fg[black]%}%!%{$reset_color%}]%{$reset_color%}
+╭─[%{$fg[yellow]%}%n@%m%{$reset_color%}]─[%{$fg[cyan]%}%~%{$reset_color%}]─[%{$fg[yellow]%}%!%{$reset_color%}]$(git_prompt_short_sha)%{$reset_color%}
 ╰─$(prompt_char) $(git_prompt_info)%(0?.%{$PROMPT_SUCCESS_COLOR%}.%{$PROMPT_FAILURE_COLOR%})❯ '
 
 #PROMPT='
