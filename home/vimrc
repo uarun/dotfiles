@@ -99,5 +99,14 @@ let g:ctrlp_custom_ignore = {
     \ }
 
 " ========== Key Mappings ==========
-nnoremap \p :set invpaste paste?<CR>
+nmap <leader>pp :set invpaste paste?<CR>
+nmap <leader>mr :CtrlPMRUFiles<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
+
+" Pink saver
+nnoremap ; :
+
+" Desired cursor movement when line wrapping is on
+nnoremap j gj
+nnoremap k gk
+
