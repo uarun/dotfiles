@@ -55,3 +55,6 @@
 [submodule "zsh_modules/omz-custom/plugins/zsh-syntax-highlighting"]
 	path = zsh_modules/omz-custom/plugins/zsh-syntax-highlighting
 	url = git://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "vim/bundle/tslime"]
+	path = vim/bundle/tslime
+	url = https://github.com/jgdavey/tslime.vim.git

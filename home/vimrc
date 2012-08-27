@@ -103,10 +103,15 @@ nmap <leader>pp :set invpaste paste?<CR>
 nmap <leader>mr :CtrlPMRUFiles<CR>
 nmap <silent> <leader>n :silent :nohlsearch<CR>
 
-" Pink saver
+" Pinky saver
 nnoremap ; :
 
 " Desired cursor movement when line wrapping is on
 nnoremap j gj
 nnoremap k gk
+
+" Tslime keybindings
+vmap <C-c><C-c> <Plug>SendSelectionToTmux
+nmap <C-c><C-c> <Plug>NormalModeSendToTmux
+nmap <C-c>r <Plug>SetTmuxVars
 
