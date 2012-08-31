@@ -3,6 +3,7 @@
 ## ===== Git Aliases ===== ###
 alias g='git'
 alias gst='git status'
+alias gls='git status --short'
 alias glg='git log --graph --pretty=oneline --abbrev-commit --all --decorate'
 
 # Auto complete for 'g' as well
