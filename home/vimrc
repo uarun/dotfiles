@@ -50,6 +50,9 @@ set softtabstop=4
 set tabstop=4
 set expandtab
 
+" Remove trailing whitespaces
+autocmd FileType scala,java,groovy,python,perl,c autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+
 filetype plugin on
 filetype indent on
 
@@ -76,9 +79,11 @@ set wildignore+=*.class,*.jar
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
 
-silent !mkdir ~/.vimundos/backups > /dev/null 2>&1
-set undodir=~/.vimundos/backups
-set undofile
+if has('persistent_undo')
+    silent !mkdir ~/.vimundos/backups > /dev/null 2>&1
+    set undodir=~/.vimundos/backups
+    set undofile
+endif
 
 " ===== Color Scheme =====
 set t_Co=256
@@ -114,4 +119,24 @@ nnoremap k gk
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 nmap <C-c>r <Plug>SetTmuxVars
+
+" Fugitive keybindings
+nnoremap <silent> <leader>gs :Gstatus<CR>
+nnoremap <silent> <leader>gd :Gdiff<CR>
+nnoremap <silent> <leader>gc :Gcommit<CR>
+nnoremap <silent> <leader>gb :Gblame<CR>
+nnoremap <silent> <leader>gl :Glog<CR>
+
+" ======== Local Customizations ========
+" Use local vimrc if available
+if filereadable(expand("~/.vimrc.local"))
+    source ~/.vimrc.local
+endif
+
+" Use local gvimrc if available and gui is running
+if has('gui_running')
+    if filereadable(expand("~/.gvimrc.local"))
+        source ~/.gvimrc.local
+    endif
+endif
 
