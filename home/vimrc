@@ -104,9 +104,22 @@ let g:ctrlp_custom_ignore = {
     \ }
 
 " ========== Key Mappings ==========
-nmap <leader>pp :set invpaste paste?<CR>
+nmap <leader>pp :set invpaste<CR>
 nmap <leader>mr :CtrlPMRUFiles<CR>
-nmap <silent> <leader>n :silent :nohlsearch<CR>
+nmap <silent> <leader>/ :nohlsearch<CR>
+
+cmap qq :qall<CR>
+
+" Change Working Directory to that of the current file
+cmap cwd lcd %:p:h
+cmap cd. lcd %:p:h
+
+" Edit mode - Copied from http://vimcasts.org/e/14
+cnoremap %% <C-R>=expand('%:h').'/'<CR>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
 
 " Pinky saver
 nnoremap ; :

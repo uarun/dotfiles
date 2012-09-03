@@ -1,6 +1,6 @@
 # My Dot Files
 
-My awesome dot files - customized preferences for Vim, Git and Shell (Bash and Zsh)
+My dot files - customized preferences for Vim, Shell (Bash and Zsh) & Git
 
 ## Installation
 
@@ -20,7 +20,7 @@ Create symlinks:
 
 ## VIM
 
-My Vim preferences are stored in `dotfiles/vimrc` respectively. 
+Vim preferences are stored in `dotfiles/vimrc` respectively. 
 All plugins and scripts are stored in the `dotfiles/vim` directory.
 
 ### Adding Plugin Bundles ###
