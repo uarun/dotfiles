@@ -2,6 +2,10 @@
 
 export UNLINK=true
 
+echo "This script must be run from the dotfiles directory"
+echo "Press <ENTER> to continue, <Ctrl-C> to cancel ..."
+read y
+
 function createSymlink {
     if [[ -a $1 ]]; then
     echo "  WARNING: $1 already exists."
@@ -26,13 +30,10 @@ function createSymlink {
     fi
 }
 
-echo "This script must be run from the dotfiles directory"
 echo "Initializing links ..."
-
-
 pushd ~
 
-export DOTFILES_DIR="${HOME}/dotfiles/home"
+DOTFILES_DIR="${HOME}/dotfiles/home"
 createSymlink .profile
 createSymlink .bashrc
 createSymlink .zshrc
@@ -41,8 +42,24 @@ createSymlink .zlogout
 createSymlink .vimrc
 createSymlink .tmux.conf
 
-export DOTFILES_DIR="${HOME}/dotfiles"
+DOTFILES_DIR="${HOME}/dotfiles"
 createSymlink .vim
 createSymlink .bash_scripts
 
+DOTFILES_DIR="${HOME}/dotfiles/git"
+cp -a ~/dotfiles/git/gitconfig ~/.gitconfig
+
 popd
+
+# ===== Copy over fonts ===== #
+echo "Copying fonts ..."
+if [[ $OSTYPE == linux-gnu ]]; then
+    mkdir -p ~/.fonts
+    cp -a fonts/* ~/.fonts/
+elif [[ $OSTYPE == darwin* ]]; then
+    mkdir -p ~/Library/Fonts
+    cp -a fonts/* ~/Library/Fonts/
+else
+    true
+fi
+
