@@ -1,0 +1,32 @@
+[user]
+	name = Arun Udayashankar
+	email = "arunkumar.u@gmail.com"
+
+[color]
+	ui = auto
+
+[diff]
+	tool = vimdiff
+
+[difftool]
+	prompt = false
+
+[alias]
+	alias   = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^        = ]*\\) = \\(.*\\)/\\1\\t = > \\2/' | sort
+	c       = commit
+	co      = checkout
+	dh      = diff HEAD
+	dc      = diff --cached
+	dt      = difftool
+	dth     = difftool HEAD
+	dtc     = difftool --cached
+	ignore  = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >> .gitignore
+	last    = log -1 HEAD --name-only
+	unstage = reset HEAD --
+	unstash = stash pop
+	lcfg    = config --local
+	gcfg    = config --global
+
+[rerere]
+	enabled = 1
+
