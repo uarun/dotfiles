@@ -122,7 +122,7 @@ map <leader>ev :vsp %%
 map <leader>et :tabe %%
 
 " Pinky saver
-nnoremap ; :
+" nnoremap ; :
 
 " Desired cursor movement when line wrapping is on
 nnoremap j gj
