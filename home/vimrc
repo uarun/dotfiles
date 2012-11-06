@@ -1,7 +1,7 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-let mapleader = ","
+"let mapleader = ","
 
 " Load plugins that ship with Vim
 runtime macros/matchit.vim
