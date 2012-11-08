@@ -83,8 +83,8 @@ function git_time_since_commit() {
 }
 
 PROMPT='
-╭─[%{$fg[yellow]%}%n@%m%{$reset_color%}]─[%{$fg[cyan]%}%~%{$reset_color%}]$(git_prompt_short_sha)%{$reset_color%}
-╰─$(prompt_char) $(git_prompt_info)%(0?.%{$PROMPT_SUCCESS_COLOR%}.%{$PROMPT_FAILURE_COLOR%})❯ '
+╭ [%{$fg[yellow]%}%n@%m%{$reset_color%}]─[%{$fg[cyan]%}%~%{$reset_color%}]$(git_prompt_short_sha)%{$reset_color%}
+╰ $(prompt_char) $(git_prompt_info)%(0?.%{$PROMPT_SUCCESS_COLOR%}.%{$PROMPT_FAILURE_COLOR%})❯ '
 
 #PROMPT='
 #╭─[%{$fg[yellow]%}%n@%m%{$reset_color%}]─[%{$fg[cyan]%}%~%{$reset_color%}]─[%{$fg[black]%}%!%{$reset_color%}]%{$fg_bold[cyan]%}$(git_prompt_short_sha)%{$reset_color%}

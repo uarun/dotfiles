@@ -13,7 +13,7 @@ call pathogen#helptags()
 
 " ================ General ======================
 set backspace=indent,eol,start
-set history=100
+set history=500
 set incsearch
 set visualbell t_vb=
 set hidden
