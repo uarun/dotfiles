@@ -76,6 +76,9 @@ set wildignore+=*\\tmp\\*,*.exe
 set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*.class,*.jar
 
+" ================ Vimdiff =======================
+set diffopt+=iwhite           "ignore whitespaces in vimdiff
+
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
 
