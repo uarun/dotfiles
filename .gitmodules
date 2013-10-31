@@ -67,3 +67,6 @@
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "colors/intellij-colors-solarized"]
+	path = colors/intellij-colors-solarized
+	url = https://github.com/jkaving/intellij-colors-solarized.git
