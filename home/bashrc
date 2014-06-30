@@ -17,6 +17,12 @@ shopt -s cmdhist      # Keep multiline commands as one command in history
 shopt -s histappend   # Keep multi-session history w/o losing one or the other
 shopt -s checkwinsize # check the window size after each command and, if necessary, update the values of LINES and COLUMNS.
 
+# Key bindings, up/down arrow searches through history
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+bind '"\eOA": history-search-backward'
+bind '"\eOB": history-search-forward'
+
 ## Git Stuff ##
 source ~/.bash_scripts/git-completion.bash
 source ~/.bash_scripts/git-alias.bash
