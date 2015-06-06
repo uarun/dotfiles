@@ -1,6 +1,6 @@
 #!/bin/sh
 
-## ===== Git Aliases ===== ###
+## ===== Git Aliases ===== ##
 alias g='git'
 alias gaa='git add -A'
 alias gst='git status'
@@ -15,8 +15,13 @@ unalias gl 2> /dev/null
 unalias gm 2> /dev/null
 unalias gp 2> /dev/null
 
-## ===== General ===== ###
+## ===== General ===== ##
 alias cls=clear
 alias vi=vim
 alias tmux="tmux -2"
 
+## ===== Mac OS Specific ===== ##
+if [[ "$OSTYPE" =~ ^darwin ]]; then
+    alias showFiles='defaults write com.apple.finder AppleShowAllFiles -boolean true; killall Finder'
+    alias hideFiles='defaults write com.apple.finder AppleShowAllFiles -boolean false; killall Finder'
+fi
