@@ -1,6 +1,8 @@
+export TERM=xterm-256color
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/dotfiles/zsh_modules/oh-my-zsh
-ZSH_CUSTOM=$HOME/dotfiles/zsh_modules/omz-custom
+ZSH_CUSTOM=$HOME/dotfiles/zsh_modules/omz-custom/plugins/
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -9,7 +11,23 @@ ZSH_CUSTOM=$HOME/dotfiles/zsh_modules/omz-custom
 ZSH_THEME="juanghurtado"
 ZSH_THEME="gozilla"
 ZSH_THEME="robbyrussell"
-ZSH_THEME="arun"
+ZSH_THEME="arun/arun"
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+
+POWERLEVEL9K_MODE='awesome-patched'                      #... or 'awesome-fontconfig' if using font config
+#POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+#POWERLEVEL9K_SHORTEN_DELIMITER=""
+#POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+POWERLEVEL9K_STATUS_VERBOSE=true
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs history)
+POWERLEVEL9K_SHOW_CHANGESET=true
+POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
+POWERLEVEL9K_COLOR_SCHEME='light'
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_HISTORY_FOREGROUND="white"
+POWERLEVEL9K_HISTORY_BACKGROUND="black"
+
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
