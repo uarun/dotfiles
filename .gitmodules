@@ -70,3 +70,6 @@
 [submodule "colors/intellij-colors-solarized"]
 	path = colors/intellij-colors-solarized
 	url = https://github.com/jkaving/intellij-colors-solarized.git
+[submodule "zsh_modules/omz-custom/plugins/powerlevel9k"]
+	path = zsh_modules/omz-custom/plugins/powerlevel9k
+	url = https://github.com/bhilburn/powerlevel9k.git
