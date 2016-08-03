@@ -61,10 +61,13 @@ source $ZSH/oh-my-zsh.sh
 # ====================================== #
 
 source $ZSH/../../zsh_modules/omz-custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH/../../zsh_modules/omz-custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main pattern)
 ZSH_HIGHLIGHT_STYLES[path]=fg=cyan,underline
 ZSH_HIGHLIGHT_PATTERNS+=('rm *' 'fg=white,bold,bg=red')
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=252'
 
 set -o vi
 
