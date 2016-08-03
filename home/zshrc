@@ -60,8 +60,10 @@ source $ZSH/oh-my-zsh.sh
 # ===== Customize to your needs... ===== #
 # ====================================== #
 
+source $ZSH/../../zsh_modules/omz-custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main pattern)
-ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
+ZSH_HIGHLIGHT_STYLES[path]=fg=cyan,underline
 ZSH_HIGHLIGHT_PATTERNS+=('rm *' 'fg=white,bold,bg=red')
 
 set -o vi
