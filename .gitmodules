@@ -76,3 +76,6 @@
 [submodule "zsh_modules/omz-custom/plugins/zsh-autosuggestions"]
 	path = zsh_modules/omz-custom/plugins/zsh-autosuggestions
 	url = git://github.com/zsh-users/zsh-autosuggestions
+[submodule "vim/bundle/idris-vim"]
+	path = vim/bundle/idris-vim
+	url = https://github.com/idris-hackers/idris-vim.git
